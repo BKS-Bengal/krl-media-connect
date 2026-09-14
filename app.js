@@ -1,7 +1,7 @@
 const T = {
   en: {
     navDay: "The day",
-    navGuests: "On stage",
+    navGallery: "Gallery",
     navPress: "Press",
     brand: "Media Connect",
     heroKicker: "14 September 2026",
@@ -46,7 +46,8 @@ const T = {
     minLede: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, was on the stage at the opening. Krishi Ratna League Bengal was named in that room.",
     capMinListen: "MahAcharyaJi at the lectern. Rinku and the Minister listening.",
     capMinPair: "Smt. Rinku Majumder Ghosh and the Minister on stage.",
-    capMin: "Shri Dudh Kumar Mondal.",
+    capMin: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
+    capMinFeature: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar.",
     rinkuTitle: "Adhyaksha",
     rinkuLede: "Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat on the pink sari for the rest of the morning.",
     capRinku: "Smt. Rinku Majumder Ghosh.",
@@ -78,7 +79,23 @@ const T = {
     capPanel: "The press panel. Seated with Reena, MahAcharyaJi, Rinku and Dhar. Mics on the yellow cloth.",
     capHuddle: "Cameras in. MahAcharyaJi facing the room.",
     capPressDhar: "Shri Debashish Dhar to the mics.",
-    capClose: "Flowers at the close. The Minister with Rinku, Reena and the team.",
+    capClose: "Outside Rabindra Okakura Bhawan after the morning.",
+    galleryTitle: "From the hall",
+    galleryLede: "Stills and clips from the Media Connect. The Krishi Ratna League intro played behind the welcome.",
+    g1: "From the stage into the hall.",
+    g2: "The Minister of Agriculture.",
+    g3: "Green room. A clay cup for the Minister.",
+    g4: "Shri Debashish Dhar at the lectern.",
+    g5: "The press, full stage.",
+    g6: "Smt. Reena J. Sarkar.",
+    g7: "Krishi Ratna League Bengal on the screen.",
+    gv1: "Clip from the hall.",
+    gv2: "Clip from the hall.",
+    gv3: "Clip from the hall.",
+    gv4: "Clip from the hall.",
+    gv5: "Clip from the hall.",
+    gv6: "Clip from the hall.",
+    gv7: "Clip from the hall.",
     footOrgs: "Bharatiya Krishak Samaj West Bengal, with KarmYog for the 21st Century.",
     footPhotos: "Photographs: Bumba and Shubhashis.",
     footRsvp: "Smt. Reena J. Sarkar +91 98300 24611. Shri Ram Badrinathan +91 91677 19898.",
@@ -86,7 +103,7 @@ const T = {
   },
   bn: {
     navDay: "সেই দিন",
-    navGuests: "মঞ্চে",
+    navGallery: "গ্যালারি",
     navPress: "প্রেস",
     brand: "মিডিয়া সংযোগ",
     heroKicker: "১৪ সেপ্টেম্বর ২০২৬",
@@ -131,7 +148,8 @@ const T = {
     minLede: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ, মিডিয়া সংযোগের সূচনায় মঞ্চে ছিলেন. কৃষি রত্ন লীগ বাংলা সেই ঘরেই নাম পেল.",
     capMinListen: "বেদিতে মহাচার্যজি. রিঙ্কু ও মন্ত্রী শুনছেন.",
     capMinPair: "মঞ্চে শ্রীমতি রিঙ্কু মজুমদার ঘোষ এবং মন্ত্রী.",
-    capMin: "শ্রী দুধ কুমার মণ্ডল.",
+    capMin: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ.",
+    capMinFeature: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রীমতি রীনা জে. সরকারের সঙ্গে.",
     rinkuTitle: "অধ্যক্ষা",
     rinkuLede: "শ্রীমতি রিঙ্কু মজুমদার ঘোষকে ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের মহিলা শাখার অধ্যক্ষা হিসেবে সম্মাননা জানানো হয়. গোলাপি শাড়িতে ব্যাজটি সকালভর ছিল.",
     capRinku: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
@@ -163,7 +181,23 @@ const T = {
     capPanel: "প্রেস প্যানেল. রীনা, মহাচার্যজি, রিঙ্কু ও ধর. হলুদ কাপড়ে মাইক.",
     capHuddle: "ক্যামেরা এগিয়ে. মহাচার্যজি ঘরের দিকে.",
     capPressDhar: "মাইকের সামনে শ্রী দেবাশীষ ধর.",
-    capClose: "শেষে ফুল. মন্ত্রী, রিঙ্কু, রীনা এবং দল.",
+    capClose: "রবীন্দ্র ওকাকুরা ভবনের বাইরে, সকালের পর.",
+    galleryTitle: "হল থেকে",
+    galleryLede: "মিডিয়া সংযোগের ছবি ও ক্লিপ. স্বাগত ব্যানারের পেছনে কৃষি রত্ন লীগের ইন্ট্রো চলে.",
+    g1: "মঞ্চ থেকে হলের দিকে.",
+    g2: "কৃষিমন্ত্রী.",
+    g3: "গ্রিন রুম. মন্ত্রীর জন্য মাটির কাপ.",
+    g4: "বেদিতে শ্রী দেবাশীষ ধর.",
+    g5: "প্রেস, পুরো মঞ্চ.",
+    g6: "শ্রীমতি রীনা জে. সরকার.",
+    g7: "পর্দায় কৃষি রত্ন লীগ বাংলা.",
+    gv1: "হলের ক্লিপ.",
+    gv2: "হলের ক্লিপ.",
+    gv3: "হলের ক্লিপ.",
+    gv4: "হলের ক্লিপ.",
+    gv5: "হলের ক্লিপ.",
+    gv6: "হলের ক্লিপ.",
+    gv7: "হলের ক্লিপ.",
     footOrgs: "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ, কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরির সঙ্গে.",
     footPhotos: "ছবি: বুম্বা এবং শুভাশিস.",
     footRsvp: "শ্রীমতি রীনা জে. সরকার +৯১ ৯৮৩০০ ২৪৬১১. শ্রী রাম বদ্রীনাথন +৯১ ৯১৬৭৭ ১৯৮৯৮.",
@@ -192,3 +226,9 @@ apply(start);
 document.querySelectorAll(".lang button").forEach((b) => {
   b.addEventListener("click", () => apply(b.dataset.lang));
 });
+
+const heroVideo = document.querySelector(".hero-video");
+if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  heroVideo.pause();
+  heroVideo.removeAttribute("autoplay");
+}

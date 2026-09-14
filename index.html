@@ -17,7 +17,7 @@
     </a>
     <nav class="nav-links">
       <a href="#day" data-i18n="navDay">The day</a>
-      <a href="#stage" data-i18n="navGuests">On stage</a>
+      <a href="#gallery" data-i18n="navGallery">Gallery</a>
       <a href="#press" data-i18n="navPress">Press</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -27,12 +27,19 @@
   </header>
 
   <section class="hero" id="top">
-    <img class="hero-img" src="images/hero.jpg" alt="MahAcharya Sourabh J. Sarkar addressing the hall at Rabindra Okakura Bhawan" fetchpriority="high" width="1600" height="1066">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/banner.jpg" aria-hidden="true">
+      <source src="video/krl-intro-bg.mp4" type="video/mp4">
+    </video>
     <div class="hero-scrim"></div>
-    <div class="hero-copy">
-      <p class="kicker" data-i18n="heroKicker">14 September 2026</p>
-      <h1 data-i18n="heroTitle">Protyabartan</h1>
-      <p class="hero-sub" data-i18n="heroSub">A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.</p>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="kicker" data-i18n="heroKicker">14 September 2026</p>
+        <h1 data-i18n="heroTitle">Protyabartan</h1>
+        <p class="hero-sub" data-i18n="heroSub">A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.</p>
+      </div>
+      <figure class="hero-banner">
+        <img src="images/banner.jpg" alt="Swagatam. A Media Connect Session. Bharatiya Krishak Samaj and KarmYog." width="1600" height="900" fetchpriority="high">
+      </figure>
     </div>
   </section>
 
@@ -146,7 +153,13 @@
         <figcaption data-i18n="capMin"></figcaption>
       </figure>
     </div>
-    <div class="wrap pair">
+    <div class="wrap">
+      <figure class="full" style="margin-top:28px">
+        <img src="images/close-flowers.jpg" alt="Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with flowers, Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar">
+        <figcaption data-i18n="capMinFeature"></figcaption>
+      </figure>
+    </div>
+    <div class="wrap pair" style="margin-top:18px">
       <figure>
         <img src="images/minister-rinku.jpg" alt="Rinku Majumder Ghosh and Minister Mondal">
         <figcaption data-i18n="capMinPair"></figcaption>
@@ -264,9 +277,88 @@
         </div>
       </div>
       <figure class="full" style="margin-top:18px">
-        <img src="images/close-flowers.jpg" alt="Flowers at the close of the morning">
+        <img src="images/g-outside.jpg" alt="Outside Rabindra Okakura Bhawan">
         <figcaption data-i18n="capClose"></figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <h2 data-i18n="galleryTitle">From the hall</h2>
+      <p class="lede" data-i18n="galleryLede"></p>
+      <div class="gallery">
+        <figure class="wide">
+          <img src="images/g-from-stage.jpg" alt="Looking from the stage into the hall">
+          <figcaption data-i18n="g1"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/g-krl-mark.jpg">
+            <source src="video/clip-1.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv1"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/g-minister.jpg" alt="Minister Mondal seated">
+          <figcaption data-i18n="g2"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/opening.jpg">
+            <source src="video/clip-2.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv2"></figcaption>
+        </figure>
+        <figure class="wide">
+          <video controls playsinline preload="metadata" poster="images/g-krl-mark.jpg">
+            <source src="video/clip-5.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv5"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/g-tea.jpg" alt="Green room, clay cup for the Minister">
+          <figcaption data-i18n="g3"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/g-dhar-speak.jpg" alt="Debashish Dhar speaking">
+          <figcaption data-i18n="g4"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/g-dhar-received.jpg">
+            <source src="video/clip-4.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv4"></figcaption>
+        </figure>
+        <figure class="wide">
+          <img src="images/g-press-wide.jpg" alt="Press conference, full stage">
+          <figcaption data-i18n="g5"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/g-audience.jpg">
+            <source src="video/clip-6.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv6"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/g-reena.jpg" alt="Smt. Reena J. Sarkar">
+          <figcaption data-i18n="g6"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/audience.jpg">
+            <source src="video/clip-7.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv7"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/g-krl-mark.jpg" alt="KRL mark on the screen">
+          <figcaption data-i18n="g7"></figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="metadata" poster="images/g-opening.jpg">
+            <source src="video/clip-3.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="gv3"></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
