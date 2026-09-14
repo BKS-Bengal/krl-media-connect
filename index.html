@@ -36,6 +36,7 @@
       <a href="#day" data-i18n="navDay">The day</a>
       <a href="#gallery" data-i18n="navGallery">Gallery</a>
       <a href="#press" data-i18n="navPress">Press</a>
+      <a href="#media" data-i18n="navMedia">Media</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="bn" aria-pressed="false">বাং</button>
@@ -202,10 +203,16 @@
           <figcaption data-i18n="capTrio"></figcaption>
         </figure>
       </div>
-      <figure class="full" style="margin-top:18px">
-        <img src="images/felicitation.jpg" alt="Standing for the felicitation, bell in hand">
-        <figcaption data-i18n="capBell"></figcaption>
-      </figure>
+      <div class="pair" style="margin-top:18px">
+        <figure>
+          <img src="images/felicitation.jpg" alt="Standing for the felicitation, bell in hand" loading="lazy">
+          <figcaption data-i18n="capBell"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/rinku-podium.jpg" alt="Smt. Rinku Majumder Ghosh speaking at the lectern" loading="lazy">
+          <figcaption data-i18n="capRinkuPodium"></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -297,6 +304,57 @@
         <img src="images/g-outside.jpg" alt="Outside Rabindra Okakura Bhawan">
         <figcaption data-i18n="capClose"></figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="section" id="media">
+    <div class="wrap">
+      <h2 data-i18n="mediaTitle">In the media</h2>
+      <p class="lede" data-i18n="mediaLede"></p>
+
+      <div class="film" style="margin-top:36px">
+        <div class="film-player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/cXO3fjWX-jg"
+            title="Media Connect, Bharatiya Krishak Samaj West Bengal, 14 September 2026"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen></iframe>
+        </div>
+        <div class="film-meta">
+          <h3 data-i18n="mediaVidName"></h3>
+          <span class="role" data-i18n="mediaVidRole"></span>
+          <p class="cap" data-i18n="mediaVidCap"></p>
+          <a class="dl" href="https://youtu.be/cXO3fjWX-jg" target="_blank" rel="noopener" data-i18n="mediaVidLink"></a>
+        </div>
+      </div>
+
+      <h3 class="sub" data-i18n="clipTitle"></h3>
+      <div class="coverage">
+        <figure class="clip">
+          <a href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" target="_blank" rel="noopener">
+            <img src="images/press-clip-hello-kolkata.jpg" alt="Hello Evening Kolkata, page 07: Focus on better facilities for Farmers in WB" loading="lazy">
+          </a>
+          <figcaption data-i18n="capClip"></figcaption>
+        </figure>
+        <aside class="card">
+          <span class="tag" data-i18n="clipOutlet"></span>
+          <h4 data-i18n="clipHead">Focus on better facilities for Farmers in WB</h4>
+          <p data-i18n="clipBody"></p>
+          <a class="dl" href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" download data-i18n="clipDl"></a>
+        </aside>
+      </div>
+
+      <h3 class="sub" data-i18n="releaseTitle"></h3>
+      <div class="release">
+        <img src="images/press-release-cover.jpg" alt="First page of the Bharatiya Krishak Samaj press release" loading="lazy">
+        <div>
+          <h4 data-i18n="releaseHead"></h4>
+          <p data-i18n="releaseBody"></p>
+          <a class="dl" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" download data-i18n="releaseDl"></a>
+        </div>
+      </div>
     </div>
   </section>
 
