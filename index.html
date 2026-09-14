@@ -22,297 +22,382 @@
   <meta name="twitter:description" content="Bharatiya Krishak Samaj West Bengal Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal.">
   <meta name="twitter:image" content="https://krl-media-connect.vercel.app/images/og.jpg">
   <link rel="image_src" href="https://krl-media-connect.vercel.app/images/og.jpg">
+  <link rel="icon" href="images/gen/seal-96.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Set before first paint so the IntersectionObserver fallback never flashes.
+       Only runs when JS is available, so a missing script leaves content visible. */
+    if (!(window.CSS && CSS.supports && CSS.supports("animation-timeline", "view()"))
+        && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("no-sdt");
+    }
+  </script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
 
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="nav">
-    <a class="nav-brand" href="#top">
-      <img src="images/bks-seal.jpg" alt="Bharatiya Krishak Samaj">
+    <a class="nav-brand" href="#top" aria-label="Media Connect, Bharatiya Krishak Samaj West Bengal">
+      <picture>
+        <source type="image/webp" srcset="images/gen/seal-96.webp">
+        <img src="images/gen/seal-96.jpg" alt="" width="96" height="98">
+      </picture>
       <span class="nav-word" data-i18n="brand">Media Connect</span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Sections">
       <a href="#day" data-i18n="navDay">The day</a>
       <a href="#gallery" data-i18n="navGallery">Gallery</a>
       <a href="#press" data-i18n="navPress">Press</a>
       <a href="#media" data-i18n="navMedia">Media</a>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="bn" aria-pressed="false">বাং</button>
+      <div class="lang" role="radiogroup" aria-label="Language">
+        <button type="button" role="radio" data-lang="en" aria-checked="true">EN</button>
+        <button type="button" role="radio" data-lang="bn" aria-checked="false">বাং</button>
       </div>
     </nav>
   </header>
 
-  <section class="hero" id="top">
-    <video class="hero-video" autoplay muted loop playsinline poster="images/banner.jpg" aria-hidden="true">
-      <source src="video/krl-intro-bg.mp4" type="video/mp4">
-    </video>
-    <div class="hero-scrim"></div>
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="kicker" data-i18n="heroKicker">14 September 2026</p>
-        <h1 data-i18n="heroTitle">Protyabartan</h1>
-        <p class="hero-sub" data-i18n="heroSub">A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.</p>
-      </div>
-      <figure class="hero-banner">
-        <img src="images/banner.jpg" alt="Swagatam. A Media Connect Session. Bharatiya Krishak Samaj and KarmYog." width="1600" height="900" fetchpriority="high">
-      </figure>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <dl class="facts">
-      <div>
-        <dt data-i18n="fDate">Date</dt>
-        <dd data-i18n="fDateV">Monday, 14 September 2026</dd>
-      </div>
-      <div>
-        <dt data-i18n="fPlace">Venue</dt>
-        <dd data-i18n="fPlaceV">Rabindra Okakura Bhawan, DD Block, Salt Lake, Kolkata</dd>
-      </div>
-      <div>
-        <dt data-i18n="fTheme">Theme</dt>
-        <dd data-i18n="fThemeV">Protyabartan, the homecoming</dd>
-      </div>
-      <div>
-        <dt data-i18n="fActs">Named that morning</dt>
-        <dd data-i18n="fActsV">KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.</dd>
-      </div>
-    </dl>
+  <!-- Chronology rail. The morning ran 09:30 to 11:10; the rail reports where
+       in that morning the reader currently is. Desktop only, decorative for AT. -->
+  <div class="rail" aria-hidden="true">
+    <div class="rail-line"><i class="rail-fill"></i></div>
+    <span class="rail-read">09:30</span>
   </div>
 
-  <section class="section" id="day">
+  <main id="main">
+
+  <section class="hero" id="top" data-rail="09:30" aria-labelledby="h-hero">
+    <div class="hero-media">
+      <picture>
+        <source type="image/webp" sizes="100vw" srcset="images/gen/hero-640.webp 640w, images/gen/hero-960.webp 960w, images/gen/hero-1280.webp 1280w">
+        <img class="hero-still" src="images/gen/hero-960.jpg" sizes="100vw"
+             srcset="images/gen/hero-640.jpg 640w, images/gen/hero-960.jpg 960w, images/gen/hero-1280.jpg 1280w"
+             alt="" width="1280" height="960" fetchpriority="high" decoding="async">
+      </picture>
+      <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="kicker" data-i18n="heroKicker">14 September 2026</p>
+      <h1 class="hero-title" id="h-hero"><span data-i18n="heroTitle">Protyabartan</span></h1>
+      <p class="hero-sub" data-i18n="heroSub">A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.</p>
+      <a class="btn" href="#media" data-i18n="ctaKit">Press kit</a>
+    </div>
+  </section>
+
+  <section class="facts-band" aria-label="Event facts" data-rail="09:30">
     <div class="wrap">
-      <h2 data-i18n="inviteTitle">The invitation, as printed</h2>
-      <p class="lede" data-i18n="inviteLede">Issued in English and Bangla from Bharatiya Krishak Samaj West Bengal and KarmYog. The card is an artefact of the morning. Body copy of this essay names only those who were in the hall.</p>
+      <dl class="facts">
+        <div class="fact">
+          <dt data-i18n="fDate">Date</dt>
+          <dd data-i18n="fDateV">Monday, 14 September 2026</dd>
+        </div>
+        <div class="fact">
+          <dt data-i18n="fPlace">Venue</dt>
+          <dd data-i18n="fPlaceV">Rabindra Okakura Bhawan, DD Block, Salt Lake, Kolkata</dd>
+        </div>
+        <div class="fact">
+          <dt data-i18n="fTheme">Theme</dt>
+          <dd data-i18n="fThemeV">Protyabartan, the homecoming</dd>
+        </div>
+        <div class="fact">
+          <dt data-i18n="fActs">Named that morning</dt>
+          <dd data-i18n="fActsV">KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Layout family: artefact pair -->
+  <section class="section" id="day" aria-labelledby="h-invite" data-rail="Before">
+    <div class="wrap">
+      <h2 id="h-invite" class="rise" data-i18n="inviteTitle">The invitation, as printed</h2>
+      <p class="lede rise" data-i18n="inviteLede">Issued in English and Bangla from Bharatiya Krishak Samaj West Bengal and KarmYog. The card is an artefact of the morning. Body copy of this essay names only those who were in the hall.</p>
       <div class="artefacts">
-        <figure>
-          <img src="images/invite-en.jpg" alt="English invitation to the Media Connect">
+        <figure class="lift">
+          <div class="frame"><picture>
+            <source type="image/webp" srcset="images/gen/invite-en-1400.webp">
+            <img src="images/gen/invite-en-1400.jpg" alt="English invitation to the Media Connect" width="1400" height="509" loading="lazy" decoding="async">
+          </picture></div>
           <figcaption data-i18n="capInviteEn">English invitation. 9:30 AM. Rabindra Okakura Bhawan.</figcaption>
         </figure>
-        <figure>
-          <img src="images/invite-bn.jpg" alt="Bengali invitation to the Media Connect">
+        <figure class="lift">
+          <div class="frame"><picture>
+            <source type="image/webp" srcset="images/gen/invite-bn-1400.webp">
+            <img src="images/gen/invite-bn-1400.jpg" alt="Bengali invitation to the Media Connect" width="1400" height="509" loading="lazy" decoding="async">
+          </picture></div>
           <figcaption data-i18n="capInviteBn">Bengali invitation. Same morning, same hall.</figcaption>
         </figure>
+        <figure class="lift art-wide">
+          <div class="frame"><picture>
+            <source type="image/webp" srcset="images/gen/banner-art.webp">
+            <img src="images/gen/banner-art.jpg" alt="Swagatam. A Media Connect Session. Bharatiya Krishak Samaj and KarmYog." width="900" height="589" loading="lazy" decoding="async">
+          </picture></div>
+          <figcaption data-i18n="capBanner">The welcome banner over the stage. Swagatam. A Media Connect Session.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section tight">
-    <div class="wrap">
-      <h2 data-i18n="progTitle">The printed programme</h2>
-      <p class="lede" data-i18n="progLede">The order as issued. Photographs below carry the live room.</p>
-      <div class="programme">
-        <time data-i18n="p1t">09:30</time><p data-i18n="p1"></p>
-        <time data-i18n="p2t">09:35</time><p data-i18n="p2"></p>
-        <time data-i18n="p3t">09:40</time><p data-i18n="p3"></p>
-        <time data-i18n="p4t">09:50</time><p data-i18n="p4"></p>
-        <time data-i18n="p5t">10:05</time><p data-i18n="p5"></p>
-        <time data-i18n="p6t">10:10</time><p data-i18n="p6"></p>
-        <time data-i18n="p7t">10:25</time><p data-i18n="p7"></p>
-        <time data-i18n="p8t">10:35</time><p data-i18n="p8"></p>
-        <time data-i18n="p9t">10:45</time><p data-i18n="p9"></p>
-        <time data-i18n="p10t">10:50</time><p data-i18n="p10"></p>
-        <time data-i18n="p11t">11:10</time><p data-i18n="p11"></p>
+  <!-- Layout family: sticky-column timeline. Content IS a sequence, so the
+       heading holds while the eleven rows pass it. -->
+  <section class="section prog" aria-labelledby="h-prog" data-rail="09:30">
+    <div class="wrap prog-grid">
+      <div class="prog-head">
+        <h2 id="h-prog" class="rise" data-i18n="progTitle">The printed programme</h2>
+        <p class="lede" data-i18n="progLede">The order as issued. Photographs below carry the live room.</p>
+        <p class="prog-span"><span data-i18n="progFrom">09:30</span><i></i><span data-i18n="progTo">11:10</span></p>
       </div>
+      <ol class="programme">
+        <li class="prow"><time data-i18n="p1t">09:30</time><p data-i18n="p1">Sacred opening. KarmYog Seva Mantra and Vande Mataram.</p></li>
+        <li class="prow"><time data-i18n="p2t">09:35</time><p data-i18n="p2">Welcome and stage call. Smt. Reena J. Sarkar.</p></li>
+        <li class="prow"><time data-i18n="p3t">09:40</time><p data-i18n="p3">Video testimonial. Shri Partha S. Chatterjee, Global Ambassador, BKS West Bengal. Video keynote from Dr. Krishan Bir Chaudhary.</p></li>
+        <li class="prow"><time data-i18n="p4t">09:50</time><p data-i18n="p4">Foundational vision and KRL Bengal launch. MahAcharya Shri Sourabh J. Sarkar.</p></li>
+        <li class="prow"><time data-i18n="p5t">10:05</time><p data-i18n="p5">Felicitation of Smt. Rinku Majumder Ghosh, Adhyaksha, Mahila Wing.</p></li>
+        <li class="prow"><time data-i18n="p6t">10:10</time><p data-i18n="p6">Ministerial address. Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.</p></li>
+        <li class="prow"><time data-i18n="p7t">10:25</time><p data-i18n="p7">Keynote. Smt. Rinku Majumder Ghosh.</p></li>
+        <li class="prow"><time data-i18n="p8t">10:35</time><p data-i18n="p8">Guest of Honour. Shri Debashish Dhar, MLA, Sonarpur Uttar.</p></li>
+        <li class="prow"><time data-i18n="p9t">10:45</time><p data-i18n="p9">Krishak Samaj Durga Puja 2026 announcement. Smt. Reena J. Sarkar.</p></li>
+        <li class="prow"><time data-i18n="p10t">10:50</time><p data-i18n="p10">Media questions. MahAcharyaJi and Smt. Rinku Majumder Ghosh.</p></li>
+        <li class="prow"><time data-i18n="p11t">11:10</time><p data-i18n="p11">Vote of thanks and National Anthem. Smt. Reena J. Sarkar.</p></li>
+      </ol>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <h2 data-i18n="roomTitle">The room</h2>
-      <p class="lede" data-i18n="roomLede">Bamboo, diya, tulsi, a yellow cloth on the lectern. The hall at Okakura before the first greeting.</p>
-      <figure class="full" style="margin-top:36px">
-        <img src="images/stage.jpg" alt="Bamboo stage set with puja and welcome banner">
-        <figcaption data-i18n="capStage"></figcaption>
-      </figure>
+  <!-- Layout family: cinematic full-bleed plate -->
+  <section class="plate" aria-labelledby="h-room" data-rail="09:25">
+    <div class="plate-inner">
+      <div class="plate-media">
+        <img src="images/stage.jpg" alt="Bamboo stage set with puja and welcome banner" width="1280" height="720" loading="lazy" decoding="async">
+      </div>
+      <div class="plate-copy">
+          <h2 id="h-room" class="rise" data-i18n="roomTitle">The room</h2>
+          <p class="lede" data-i18n="roomLede">Bamboo, diya, tulsi, a yellow cloth on the lectern. The hall at Okakura before the first greeting.</p>
+          <p class="cap" data-i18n="capStage">Stage set. Welcome banner, puja, and the four invited faces as printed.</p>
+        </div>
     </div>
   </section>
 
-  <section class="section" id="stage">
-    <div class="wrap">
-      <h2 data-i18n="openTitle">The greeting</h2>
-      <figure class="full" style="margin-top:36px">
-        <img src="images/opening.jpg" alt="Opening namaste on stage">
-        <figcaption data-i18n="capOpen"></figcaption>
-      </figure>
+  <section class="plate alt" id="stage" aria-labelledby="h-open" data-rail="09:30">
+    <div class="plate-inner">
+      <div class="plate-media">
+        <img src="images/opening.jpg" alt="Opening namaste on stage" width="1280" height="960" loading="lazy" decoding="async">
+      </div>
+      <div class="plate-copy">
+          <h2 id="h-open" class="rise" data-i18n="openTitle">The greeting</h2>
+          <p class="cap wide" data-i18n="capOpen">MahAcharya Shri Sourabh J. Sarkar at the lectern. Smt. Reena J. Sarkar, Smt. Rinku Majumder Ghosh, and Shri Dudh Kumar Mondal on the bamboo seats.</p>
+        </div>
     </div>
   </section>
 
-  <section class="section" id="film">
+  <!-- Layout family: media module -->
+  <section class="section" id="film" aria-labelledby="h-partha" data-rail="09:40">
     <div class="wrap">
-      <h2 data-i18n="parthaTitle">The video testimonial</h2>
-      <p class="lede" data-i18n="parthaLede"></p>
+      <h2 id="h-partha" class="rise" data-i18n="parthaTitle">The video testimonial</h2>
+      <p class="lede rise" data-i18n="parthaLede">The hall played the film of Shri Partha S. Chatterjee, Global Ambassador and Senior Advisor for AI, Technology and Energy Transition, Bharatiya Krishak Samaj West Bengal.</p>
       <div class="film">
         <div class="film-player">
-          <video controls playsinline preload="metadata" poster="images/partha-poster.jpg">
-            <source src="video/partha-testimonial.mp4" type="video/mp4">
-          </video>
+          <button class="play-shot" type="button" data-video="video/partha-testimonial.mp4" data-label="Play the video testimonial of Shri Partha S. Chatterjee">
+            <img src="images/partha-poster.jpg" alt="Shri Partha S. Chatterjee, Global Ambassador, Bharatiya Krishak Samaj West Bengal" width="1600" height="900" loading="lazy" decoding="async">
+            <span class="play-mark" aria-hidden="true"></span>
+            <span class="sr" data-i18n="playFilm">Play the video testimonial</span>
+          </button>
         </div>
         <div class="film-meta">
-          <img src="images/partha-poster.jpg" alt="Partha S. Chatterjee, Global Ambassador, Bharatiya Krishak Samaj West Bengal">
-          <h3 data-i18n="parthaName"></h3>
-          <span class="role" data-i18n="parthaRole"></span>
-          <p class="cap" data-i18n="capPartha"></p>
+          <h3 data-i18n="parthaName">Shri Partha S. Chatterjee</h3>
+          <span class="role" data-i18n="parthaRole">Global Ambassador, BKS West Bengal</span>
+          <p class="cap" data-i18n="capPartha">The card that sat with the film. Four minutes forty-seven seconds.</p>
+          <p class="note" data-i18n="noCaptions">Captions for this film are not yet available.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap split">
-      <div>
-        <h2 data-i18n="minTitle">The Minister</h2>
-        <p class="lede" data-i18n="minLede"></p>
-      </div>
-      <figure>
-        <img src="images/minister.jpg" alt="Shri Dudh Kumar Mondal">
-        <figcaption data-i18n="capMin"></figcaption>
-      </figure>
-    </div>
+  <!-- Layout family: sticky stack. Three cards pin at the top in turn; the
+       one behind sinks and dims as the next arrives. One card per person. -->
+  <div class="stack">
+
+    <section class="slot" aria-labelledby="h-min" data-rail="10:10">
+      <article class="card-xl">
+        <figure class="card-hero">
+          <img src="images/minister.jpg" alt="Shri Dudh Kumar Mondal" width="1280" height="960" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-body">
+          <p class="who"><b data-i18n="nMin">Shri Dudh Kumar Mondal</b><span data-i18n="rMin">Hon'ble Minister of Agriculture, West Bengal</span></p>
+          <h2 id="h-min" data-i18n="minTitle">The Minister</h2>
+          <p class="lede" data-i18n="minLede">Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, was on the stage at the opening. Krishi Ratna League Bengal was named in that room.</p>
+          <div class="thumbs">
+            <figure>
+              <button class="shot" type="button" data-full="images/minister-session.jpg" data-cap="MahAcharyaJi at the lectern. Rinku and the Minister listening.">
+                <img src="images/minister-session.jpg" alt="MahAcharyaJi speaking, Minister and Rinku listening" width="1280" height="960" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capMinListen">MahAcharyaJi at the lectern. Rinku and the Minister listening.</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-full="images/close-flowers.jpg" data-cap="Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar.">
+                <img src="images/close-flowers.jpg" alt="Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with flowers, Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar" width="1280" height="591" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capMinFeature">Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="slot" aria-labelledby="h-rinku" data-rail="10:05">
+      <article class="card-xl">
+        <figure class="card-hero">
+          <img src="images/rinku.jpg" alt="Smt. Rinku Majumder Ghosh" width="1280" height="960" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-body">
+          <p class="who"><b data-i18n="nRinku">Smt. Rinku Majumder Ghosh</b><span data-i18n="rRinku">Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj</span></p>
+          <h2 id="h-rinku" data-i18n="rinkuTitle">Adhyaksha</h2>
+          <p class="lede" data-i18n="rinkuLede">Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat on the pink sari for the rest of the morning.</p>
+          <div class="thumbs">
+            <figure>
+              <button class="shot" type="button" data-full="images/trio.jpg" data-cap="Smt. Reena J. Sarkar, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar.">
+                <img src="images/trio.jpg" alt="Reena, Rinku and Debashish Dhar on stage" width="1280" height="960" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capTrio">Smt. Reena J. Sarkar, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar.</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-full="images/felicitation.jpg" data-cap="The bell. Standing for the felicitation. MahAcharyaJi, Reena, Rinku, Dhar.">
+                <img src="images/felicitation.jpg" alt="Standing for the felicitation, bell in hand" width="1280" height="960" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capBell">The bell. Standing for the felicitation. MahAcharyaJi, Reena, Rinku, Dhar.</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-full="images/rinku-podium.jpg" data-cap="Smt. Rinku Majumder Ghosh at the lectern. The keynote, 10:25.">
+                <img src="images/rinku-podium.jpg" alt="Smt. Rinku Majumder Ghosh speaking at the lectern" width="629" height="513" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capRinkuPodium">Smt. Rinku Majumder Ghosh at the lectern. The keynote, 10:25.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="slot" aria-labelledby="h-dhar" data-rail="10:35">
+      <article class="card-xl">
+        <figure class="card-hero">
+          <img src="images/dhar-podium.jpg" alt="Shri Debashish Dhar at the lectern" width="960" height="1280" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-body">
+          <p class="who"><b data-i18n="nDhar">Shri Debashish Dhar</b><span data-i18n="rDhar">MLA, Sonarpur Uttar</span></p>
+          <h2 id="h-dhar" data-i18n="dharTitle">Guest of Honour</h2>
+          <p class="lede" data-i18n="dharLede">Shri Debashish Dhar, MLA, Sonarpur Uttar, addressed the hall from the yellow-draped lectern.</p>
+          <div class="thumbs">
+            <figure>
+              <button class="shot" type="button" data-full="images/dhar-garland.jpg" data-cap="A garland on the Guest of Honour. The hall photographing.">
+                <img src="images/dhar-garland.jpg" alt="Rinku garlands Debashish Dhar" width="1280" height="591" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="capGarland">A garland on the Guest of Honour. The hall photographing.</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-full="images/g-dhar-speak.jpg" data-cap="Shri Debashish Dhar at the lectern.">
+                <img src="images/g-dhar-speak.jpg" alt="Debashish Dhar speaking" width="960" height="1280" loading="lazy" decoding="async">
+              </button>
+              <figcaption data-i18n="g4">Shri Debashish Dhar at the lectern.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- Layout family: editorial index. Content is provisional; see voicesNote. -->
+  <section class="section" aria-labelledby="h-voices" data-rail="Record">
     <div class="wrap">
-      <figure class="full" style="margin-top:28px">
-        <img src="images/close-flowers.jpg" alt="Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with flowers, Smt. Rinku Majumder Ghosh and Smt. Reena J. Sarkar">
-        <figcaption data-i18n="capMinFeature"></figcaption>
-      </figure>
-    </div>
-    <div class="wrap pair" style="margin-top:18px">
-      <figure>
-        <img src="images/minister-rinku.jpg" alt="Rinku Majumder Ghosh and Minister Mondal">
-        <figcaption data-i18n="capMinPair"></figcaption>
-      </figure>
-      <figure>
-        <img src="images/minister-session.jpg" alt="MahAcharyaJi speaking, Minister and Rinku listening">
-        <figcaption data-i18n="capMinListen"></figcaption>
-      </figure>
+      <h2 id="h-voices" class="rise" data-i18n="voicesTitle">What the stage carried</h2>
+      <p class="pending" data-i18n="voicesNote">The argument of the morning, in each voice. Exact words from the recordings will replace these lines.</p>
+      <ol class="voices">
+        <li>
+          <p data-i18n="v1">The farmer is not a backdrop to policy. Krishi Ratna League puts the field at the centre of Bengal's next public contest.</p>
+          <h3 data-i18n="v1n">Shri Dudh Kumar Mondal</h3>
+          <span class="role" data-i18n="v1r">Hon'ble Minister of Agriculture, West Bengal</span>
+        </li>
+        <li>
+          <p data-i18n="v2">Half of Bengal's farm is a woman. The Mahila Wing is not a side room of the Samaj.</p>
+          <h3 data-i18n="v2n">Smt. Rinku Majumder Ghosh</h3>
+          <span class="role" data-i18n="v2r">Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj</span>
+        </li>
+        <li>
+          <p data-i18n="v3">Protyabartan is not nostalgia. It is the village asking its children to stand with the soil again.</p>
+          <h3 data-i18n="v3n">Shri Debashish Dhar</h3>
+          <span class="role" data-i18n="v3r">MLA, Sonarpur Uttar</span>
+        </li>
+        <li>
+          <p data-i18n="v4">A league with a working farm at the end of it, not a trophy on a shelf.</p>
+          <h3 data-i18n="v4n">MahAcharya Shri Sourabh J. Sarkar</h3>
+          <span class="role" data-i18n="v4r">State President, BKS West Bengal. KarmYog Ashram</span>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <h2 data-i18n="rinkuTitle">Adhyaksha</h2>
-      <p class="lede" data-i18n="rinkuLede"></p>
-      <div class="portrait-row">
-        <figure>
-          <img src="images/rinku.jpg" alt="Smt. Rinku Majumder Ghosh">
-          <figcaption data-i18n="capRinku"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/trio.jpg" alt="Reena, Rinku and Debashish Dhar on stage">
-          <figcaption data-i18n="capTrio"></figcaption>
-        </figure>
+  <!-- Layout family: pinned moment. The single news event of the morning. -->
+  <section class="launch" aria-labelledby="h-launch" data-rail="09:50">
+    <div class="launch-stage">
+      <div class="launch-frame">
+        <img src="images/launch-wide.jpg" alt="Krishi Ratna League Bengal launch slide on the screen" width="1280" height="960" loading="lazy" decoding="async">
+        <div class="launch-veil" aria-hidden="true"></div>
       </div>
-      <div class="pair" style="margin-top:18px">
-        <figure>
-          <img src="images/felicitation.jpg" alt="Standing for the felicitation, bell in hand" loading="lazy">
-          <figcaption data-i18n="capBell"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/rinku-podium.jpg" alt="Smt. Rinku Majumder Ghosh speaking at the lectern" loading="lazy">
-          <figcaption data-i18n="capRinkuPodium"></figcaption>
-        </figure>
+      <div class="launch-type">
+        <h2 id="h-launch" data-i18n="launchTitle">Krishi Ratna League Bengal</h2>
+        <p data-i18n="capLaunch">Launch of Krishi Ratna League Bengal on the screen. MahAcharyaJi at the lectern. Reena, Rinku, Dhar seated.</p>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" aria-labelledby="h-hall" data-rail="Room">
     <div class="wrap">
-      <h2 data-i18n="dharTitle">Guest of Honour</h2>
-      <p class="lede" data-i18n="dharLede"></p>
-      <div class="pair">
-        <figure>
-          <img src="images/dhar-podium.jpg" alt="Shri Debashish Dhar at the lectern">
-          <figcaption data-i18n="capDhar"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/dhar-garland.jpg" alt="Rinku garlands Debashish Dhar">
-          <figcaption data-i18n="capGarland"></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <h2 data-i18n="voicesTitle">What the stage carried</h2>
-      <p class="note" data-i18n="voicesNote"></p>
-      <div class="voices">
-        <article>
-          <h3 data-i18n="v1n"></h3>
-          <span class="role" data-i18n="v1r"></span>
-          <p data-i18n="v1"></p>
-        </article>
-        <article>
-          <h3 data-i18n="v2n"></h3>
-          <span class="role" data-i18n="v2r"></span>
-          <p data-i18n="v2"></p>
-        </article>
-        <article>
-          <h3 data-i18n="v3n"></h3>
-          <span class="role" data-i18n="v3r"></span>
-          <p data-i18n="v3"></p>
-        </article>
-        <article>
-          <h3 data-i18n="v4n"></h3>
-          <span class="role" data-i18n="v4r"></span>
-          <p data-i18n="v4"></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <h2 data-i18n="hallTitle">The hall</h2>
-      <figure class="full" style="margin-top:36px">
-        <img src="images/audience.jpg" alt="Audience at Rabindra Okakura Bhawan">
-        <figcaption data-i18n="capHall"></figcaption>
-      </figure>
-      <figure class="full" style="margin-top:18px">
-        <img src="images/launch-wide.jpg" alt="Krishi Ratna League Bengal launch slide">
-        <figcaption data-i18n="capLaunch"></figcaption>
+      <h2 id="h-hall" class="rise" data-i18n="hallTitle">The hall</h2>
+      <figure class="bleed lift">
+        <div class="frame"><img src="images/audience.jpg" alt="Audience at Rabindra Okakura Bhawan" width="1280" height="960" loading="lazy" decoding="async"></div>
+        <figcaption data-i18n="capHall">Press, farmers, the team. Rabindra Okakura Bhawan.</figcaption>
       </figure>
       <div class="marks">
-        <img class="krl" src="images/krl-logo.png" alt="Krishi Ratna League Bengal">
-        <img src="images/masthead.png" alt="KarmYog and Bharatiya Krishak Samaj">
+        <img class="krl" src="images/krl-logo.png" alt="" width="836" height="524" loading="lazy" decoding="async">
+        <img src="images/masthead.png" alt="" width="1280" height="427" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
 
-  <section class="section" id="press">
+  <!-- Layout family: press mosaic -->
+  <section class="section" id="press" aria-labelledby="h-press" data-rail="10:50">
     <div class="wrap">
-      <h2 data-i18n="pressTitle">The press huddle</h2>
-      <p class="lede" data-i18n="pressLede"></p>
-      <div class="press-grid">
-        <figure>
-          <img src="images/press-panel.jpg" alt="Press panel on the bamboo sofa">
-          <figcaption data-i18n="capPanel"></figcaption>
+      <h2 id="h-press" class="rise" data-i18n="pressTitle">The press huddle</h2>
+      <p class="lede rise" data-i18n="pressLede">After the programme the mics closed in. MahAcharyaJi, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar and Smt. Reena J. Sarkar took the questions together. Bonglive, 24 Ghanta and the rest of the room stayed until the last answer.</p>
+      <div class="mosaic">
+        <figure class="m-a lift">
+          <div class="frame"><img src="images/press-panel.jpg" alt="Press panel on the bamboo sofa" width="1280" height="960" loading="lazy" decoding="async"></div>
+          <figcaption data-i18n="capPanel">The press panel. Seated with Reena, MahAcharyaJi, Rinku and Dhar. Mics on the yellow cloth.</figcaption>
         </figure>
-        <div class="stack">
-          <figure>
-            <img src="images/press-huddle.jpg" alt="Press huddle around MahAcharyaJi">
-            <figcaption data-i18n="capHuddle"></figcaption>
-          </figure>
-          <figure>
-            <img src="images/press-dhar.jpg" alt="Debashish Dhar speaking to microphones">
-            <figcaption data-i18n="capPressDhar"></figcaption>
-          </figure>
-        </div>
+        <figure class="m-b lift">
+          <div class="frame"><img src="images/press-huddle.jpg" alt="Press huddle around MahAcharyaJi" width="1280" height="720" loading="lazy" decoding="async"></div>
+          <figcaption data-i18n="capHuddle">Cameras in. MahAcharyaJi facing the room.</figcaption>
+        </figure>
+        <figure class="m-c lift">
+          <div class="frame"><img src="images/press-dhar.jpg" alt="Debashish Dhar speaking to microphones" width="1280" height="720" loading="lazy" decoding="async"></div>
+          <figcaption data-i18n="capPressDhar">Shri Debashish Dhar to the mics.</figcaption>
+        </figure>
       </div>
-      <figure class="full" style="margin-top:18px">
-        <img src="images/g-outside.jpg" alt="Outside Rabindra Okakura Bhawan">
-        <figcaption data-i18n="capClose"></figcaption>
+      <figure class="bleed lift">
+        <div class="frame"><img src="images/g-outside.jpg" alt="Outside Rabindra Okakura Bhawan" width="1280" height="590" loading="lazy" decoding="async"></div>
+        <figcaption data-i18n="capClose">Outside Rabindra Okakura Bhawan after the morning.</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="section" id="media">
+  <!-- Layout family: coverage cards -->
+  <section class="section" id="media" aria-labelledby="h-media" data-rail="Coverage">
     <div class="wrap">
-      <h2 data-i18n="mediaTitle">In the media</h2>
-      <p class="lede" data-i18n="mediaLede"></p>
+      <h2 id="h-media" class="rise" data-i18n="mediaTitle">In the media</h2>
+      <p class="lede rise" data-i18n="mediaLede">A running record of the coverage. Clippings, broadcast and video from the morning of 14 September 2026 are added here as they appear.</p>
 
-      <div class="film" style="margin-top:36px">
+      <div class="film">
         <div class="film-player">
           <iframe
             src="https://www.youtube-nocookie.com/embed/cXO3fjWX-jg"
@@ -323,130 +408,148 @@
             allowfullscreen></iframe>
         </div>
         <div class="film-meta">
-          <h3 data-i18n="mediaVidName"></h3>
-          <span class="role" data-i18n="mediaVidRole"></span>
-          <p class="cap" data-i18n="mediaVidCap"></p>
-          <a class="dl" href="https://youtu.be/cXO3fjWX-jg" target="_blank" rel="noopener" data-i18n="mediaVidLink"></a>
+          <h3 data-i18n="mediaVidName">Media Connect, on camera</h3>
+          <span class="role" data-i18n="mediaVidRole">YouTube · 14 September 2026</span>
+          <p class="cap" data-i18n="mediaVidCap">Footage from the Media Connect session at Rabindra Okakura Bhawan.</p>
+          <a class="btn ghost" href="https://youtu.be/cXO3fjWX-jg" target="_blank" rel="noopener" data-i18n="mediaVidLink">Watch on YouTube</a>
         </div>
       </div>
 
-      <h3 class="sub" data-i18n="clipTitle"></h3>
       <div class="coverage">
-        <figure class="clip">
-          <a href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" target="_blank" rel="noopener" aria-label="Open the Hello Evening Kolkata page 07 clipping as a PDF">
-            <img src="images/press-clip-hello-kolkata.jpg" alt="Hello Evening Kolkata, page 07: Focus on better facilities for Farmers in WB" loading="lazy">
+        <figure class="clip lift">
+          <a class="frame doc" href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" target="_blank" rel="noopener" aria-label="Open the Hello Evening Kolkata page 07 clipping as a PDF">
+            <img src="images/press-clip-hello-kolkata.jpg" alt="Hello Evening Kolkata, page 07: Focus on better facilities for Farmers in WB" width="1498" height="1232" loading="lazy" decoding="async">
           </a>
-          <figcaption data-i18n="capClip"></figcaption>
+          <figcaption data-i18n="capClip">Hello Evening Kolkata, page 07, Monday, 14 September 2026.</figcaption>
         </figure>
-        <aside class="card">
-          <span class="tag" data-i18n="clipOutlet"></span>
-          <h4 data-i18n="clipHead">Focus on better facilities for Farmers in WB</h4>
-          <p data-i18n="clipBody"></p>
-          <a class="dl" href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" download data-i18n="clipDl"></a>
-        </aside>
+        <article class="card">
+          <ul class="meta">
+            <li data-i18n="clipOutlet">Hello Evening Kolkata</li>
+            <li data-i18n="clipPage">Page 07</li>
+            <li data-i18n="clipDate">14 September 2026</li>
+          </ul>
+          <h3 data-i18n="clipHead">Focus on better facilities for Farmers in WB</h3>
+          <p data-i18n="clipBody">Reported by Asish Basak on the Hello Kolkata Focus page. The Media Connect session, the Krishi Ratna League announcement, and Smt. Rinku Majumder Ghosh on the holistic development of farmers after her induction as Chief of the Ladies Wing, BKS West Bengal.</p>
+          <a class="btn ghost" href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf" download data-i18n="clipDl">Download the page (PDF)</a>
+        </article>
+        <article class="card">
+          <ul class="meta">
+            <li data-i18n="releaseTag">Press release</li>
+            <li data-i18n="releaseRef">BKS-WB/PR/2026/09-14</li>
+          </ul>
+          <h3 data-i18n="releaseHead">Bharatiya Krishak Samaj West Bengal with KarmYog for the 21st Century</h3>
+          <p data-i18n="releaseBody">Issued for immediate release. Ref BKS-WB/PR/2026/09-14. Krishi Ratna League launched with AI-driven farmer outreach, Smt. Rinku Majumder Ghosh felicitated as State Adhyaksha, and the Durga Puja 2026 theme Protyabartan unveiled. English and Bangla, two pages.</p>
+          <a class="btn ghost" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" download data-i18n="releaseDl">Download the press release (PDF)</a>
+        </article>
+        <figure class="clip lift">
+          <a class="frame doc" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" target="_blank" rel="noopener" aria-label="Open the Bharatiya Krishak Samaj press release as a PDF">
+            <img src="images/press-release-cover.jpg" alt="First page of the Bharatiya Krishak Samaj press release" width="990" height="1400" loading="lazy" decoding="async">
+          </a>
+          <figcaption data-i18n="capRelease">Press release, first page. English and Bangla, two pages.</figcaption>
+        </figure>
       </div>
+    </div>
+  </section>
 
-      <h3 class="sub" data-i18n="releaseTitle"></h3>
-      <div class="release">
-        <img src="images/press-release-cover.jpg" alt="First page of the Bharatiya Krishak Samaj press release" loading="lazy">
-        <div>
-          <h4 data-i18n="releaseHead"></h4>
-          <p data-i18n="releaseBody"></p>
-          <a class="dl" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" download data-i18n="releaseDl"></a>
+  <!-- Layout family: pinned horizontal pan. Vertical scroll drives the room
+       sideways, so the gallery is read across rather than down. Pure CSS
+       view-timeline; below 900px it degrades to a native snap reel. -->
+  <section class="pan-sec" id="gallery" aria-labelledby="h-gal" data-rail="Room">
+    <div class="wrap pan-head">
+      <h2 id="h-gal" class="rise" data-i18n="galleryTitle">From the hall</h2>
+      <p class="lede rise" data-i18n="galleryLede">Stills and clips from the Media Connect. The Krishi Ratna League intro played behind the welcome.</p>
+    </div>
+    <div class="pan">
+      <div class="pan-stage">
+        <div class="pan-track" tabindex="0" role="group" aria-labelledby="h-gal">
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-from-stage.jpg" data-cap="From the stage into the hall.">
+          <img src="images/g-from-stage.jpg" alt="Looking from the stage into the hall" width="1280" height="960" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g1">From the stage into the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-1.mp4"><img src="images/g-krl-mark.jpg" alt="Still from a clip recorded in the hall" width="1280" height="960" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv1">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-minister.jpg" data-cap="The Minister of Agriculture.">
+          <img src="images/g-minister.jpg" alt="Minister Mondal seated" width="960" height="1280" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g2">The Minister of Agriculture.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-2.mp4"><img src="images/opening.jpg" alt="Still from a clip recorded in the hall" width="1280" height="960" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv2">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-press-wide.jpg" data-cap="The press, full stage.">
+          <img src="images/g-press-wide.jpg" alt="Press conference, full stage" width="1280" height="590" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g5">The press, full stage.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-5.mp4"><img src="images/g-krl-mark.jpg" alt="Still from a clip recorded in the hall" width="1280" height="960" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv5">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-tea.jpg" data-cap="Green room. A clay cup for the Minister.">
+          <img src="images/g-tea.jpg" alt="Green room, clay cup for the Minister" width="960" height="1280" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g3">Green room. A clay cup for the Minister.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-4.mp4"><img src="images/g-dhar-received.jpg" alt="Still from a clip recorded in the hall" width="960" height="1280" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv4">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-6.mp4"><img src="images/g-audience.jpg" alt="Still from a clip recorded in the hall" width="1280" height="960" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv6">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-reena.jpg" data-cap="Smt. Reena J. Sarkar.">
+          <img src="images/g-reena.jpg" alt="Smt. Reena J. Sarkar" width="960" height="1280" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g6">Smt. Reena J. Sarkar.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-7.mp4"><img src="images/audience.jpg" alt="Still from a clip recorded in the hall" width="1280" height="960" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv7">Clip from the hall.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot" type="button" data-full="images/g-krl-mark.jpg" data-cap="Krishi Ratna League Bengal on the screen.">
+          <img src="images/g-krl-mark.jpg" alt="KRL mark on the screen" width="1280" height="960" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-i18n="g7">Krishi Ratna League Bengal on the screen.</figcaption>
+      </figure>
+        <figure class="cell">
+        <button class="shot play-shot" type="button" data-video="video/clip-3.mp4"><img src="images/g-opening.jpg" alt="Still from a clip recorded in the hall" width="1280" height="576" loading="lazy" decoding="async"><span class="play-mark" aria-hidden="true"></span><span class="sr" data-i18n="playClip">Play clip</span></button>
+        <figcaption data-i18n="gv3">Clip from the hall.</figcaption>
+      </figure>
         </div>
+        <div class="pan-bar" aria-hidden="true"><i></i></div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="gallery">
-    <div class="wrap">
-      <h2 data-i18n="galleryTitle">From the hall</h2>
-      <p class="lede" data-i18n="galleryLede"></p>
-      <div class="gallery">
-        <figure class="wide">
-          <img src="images/g-from-stage.jpg" alt="Looking from the stage into the hall">
-          <figcaption data-i18n="g1"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/g-krl-mark.jpg">
-            <source src="video/clip-1.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv1"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/g-minister.jpg" alt="Minister Mondal seated">
-          <figcaption data-i18n="g2"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/opening.jpg">
-            <source src="video/clip-2.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv2"></figcaption>
-        </figure>
-        <figure class="wide">
-          <video controls playsinline preload="metadata" poster="images/g-krl-mark.jpg">
-            <source src="video/clip-5.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv5"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/g-tea.jpg" alt="Green room, clay cup for the Minister">
-          <figcaption data-i18n="g3"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/g-dhar-speak.jpg" alt="Debashish Dhar speaking">
-          <figcaption data-i18n="g4"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/g-dhar-received.jpg">
-            <source src="video/clip-4.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv4"></figcaption>
-        </figure>
-        <figure class="wide">
-          <img src="images/g-press-wide.jpg" alt="Press conference, full stage">
-          <figcaption data-i18n="g5"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/g-audience.jpg">
-            <source src="video/clip-6.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv6"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/g-reena.jpg" alt="Smt. Reena J. Sarkar">
-          <figcaption data-i18n="g6"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/audience.jpg">
-            <source src="video/clip-7.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv7"></figcaption>
-        </figure>
-        <figure>
-          <img src="images/g-krl-mark.jpg" alt="KRL mark on the screen">
-          <figcaption data-i18n="g7"></figcaption>
-        </figure>
-        <figure>
-          <video controls playsinline preload="metadata" poster="images/g-opening.jpg">
-            <source src="video/clip-3.mp4" type="video/mp4">
-          </video>
-          <figcaption data-i18n="gv3"></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <footer class="footer">
+  <footer class="footer" data-rail="11:10">
     <div class="wrap">
-      <strong data-i18n="footOrgs"></strong>
-      <div class="row">
-        <p data-i18n="footPhotos"></p>
-        <p data-i18n="footRsvp"></p>
+      <strong data-i18n="footOrgs">Bharatiya Krishak Samaj West Bengal, with KarmYog for the 21st Century.</strong>
+      <div class="foot-grid">
+        <p data-i18n="footPhotos">Photographs: Bumba and Shubhashis.</p>
+        <p data-i18n="footRsvp">Smt. Reena J. Sarkar +91 98300 24611. Shri Ram Badrinathan +91 91677 19898.</p>
+        <p data-i18n="footPlace">State office: F-127, Downtown Mall, Uniworld City, New Town, Kolkata 700156.</p>
       </div>
-      <p style="margin-top:12px" data-i18n="footPlace"></p>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Photograph">
+    <button class="lb-close" type="button" aria-label="Close">Close</button>
+    <img alt="">
+    <p class="lb-cap"></p>
+  </dialog>
 
   <script src="app.js"></script>
 </body>
