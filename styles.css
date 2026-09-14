@@ -300,6 +300,37 @@ figcaption, .cap {
   max-width: 62ch;
 }
 
+.film {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  gap: 22px;
+  align-items: start;
+}
+.film-player {
+  background: #07101f;
+}
+.film-player video,
+.film-player iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #07101f;
+}
+.film-meta h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 12px;
+}
+.film-meta .role {
+  display: block;
+  font-size: 13px;
+  color: var(--mute);
+  margin: 4px 0 0;
+}
+
 .split {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -394,7 +425,7 @@ figcaption, .cap {
   .nav-word { display: none; }
   .nav-links { gap: 12px; font-size: 12px; }
   .hero-copy, .wrap { padding-left: 16px; padding-right: 16px; }
-  .facts, .artefacts, .pair, .split, .portrait-row, .press-grid, .voices, .programme {
+  .facts, .artefacts, .pair, .split, .portrait-row, .press-grid, .voices, .programme, .film {
     grid-template-columns: 1fr;
   }
   .facts div, .voices article {
