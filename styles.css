@@ -51,16 +51,22 @@
 :root {
   /* Earthy palette: soil, bark, clay, turmeric, field green, unbleached paper.
      Drawn from the hall at Okakura — wood panelling, brown seats, cream walls. */
-  --ink: #1b1510;
-  --ink-2: #2a2019;
-  --ink-3: #3d3025;
-  --clay: #b4653a;
-  --gold: #e3a93c;
-  --gold-dim: #a97a22;
-  --leaf: #7a9247;
-  --paper: #f3ece1;
-  --mute: #b3a695;
-  --line: rgba(227, 169, 60, 0.26);
+  /* Light earthy pink. --ink is the PAGE BACKGROUND, --paper is the TEXT.
+     The hero keeps a dark scrim because light type sits over video there. */
+  --ink: #fbe9e5;
+  --ink-2: #f6ded8;
+  --ink-3: #eccbc3;
+  --surface: #fffaf9;
+  --clay: #a8502e;
+  --gold: #a8761d;
+  --gold-dim: #82590f;
+  --leaf: #5f7434;
+  --paper: #33211d;
+  --mute: #8a6a63;
+  --hero-text: #fdf4f0;
+  --on-gold: #2e1b17;
+  --scrim: 51, 33, 29;
+  --line: rgba(168, 80, 46, 0.24);
   --radius: 0;
   --nav: 64px;
 }
@@ -102,8 +108,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   justify-content: space-between;
   gap: 1rem;
   padding: 0 28px;
-  background: rgba(10, 23, 48, 0.88);
-  border-bottom: 1px solid rgba(239, 182, 60, 0.18);
+  background: rgba(251, 233, 229, 0.93);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 .nav-brand {
   display: flex;
@@ -139,7 +146,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .lang button[aria-pressed="true"] {
   background: var(--gold);
-  color: var(--ink);
+  color: var(--on-gold);
   font-weight: 600;
 }
 
@@ -165,8 +172,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(10, 23, 48, 0.82) 0%, rgba(10, 23, 48, 0.42) 42%, rgba(10, 23, 48, 0.55) 100%),
-    linear-gradient(180deg, rgba(10, 23, 48, 0.28) 0%, rgba(10, 23, 48, 0.55) 100%);
+    linear-gradient(90deg, rgba(var(--scrim), 0.82) 0%, rgba(var(--scrim), 0.42) 42%, rgba(var(--scrim), 0.55) 100%),
+    linear-gradient(180deg, rgba(var(--scrim), 0.28) 0%, rgba(var(--scrim), 0.55) 100%);
 }
 .hero-inner {
   position: relative;
@@ -183,9 +190,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero-copy { padding-top: 0; }
 .hero-banner {
   margin: 0;
-  background: var(--paper);
-  outline: 1px solid rgba(239, 182, 60, 0.45);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
+  background: var(--surface);
+  outline: 1px solid var(--line);
+  box-shadow: 0 24px 60px rgba(51, 33, 29, 0.18);
 }
 .hero-banner img {
   width: 100%;
@@ -196,7 +203,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  /* sits over the dark hero scrim, so it keeps the bright gold */
+  color: #e3a93c;
   font-weight: 600;
   margin-bottom: 14px;
 }
@@ -206,6 +214,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-weight: 500;
   letter-spacing: -0.03em;
   max-width: 12ch;
+  color: var(--hero-text);
 }
 html[lang="bn"] .hero h1 {
   letter-spacing: 0;
@@ -217,7 +226,7 @@ html[lang="bn"] .hero h1 {
   max-width: 36ch;
   font-size: 18px;
   line-height: 1.45;
-  color: var(--paper);
+  color: var(--hero-text);
 }
 
 .wrap {
@@ -297,11 +306,11 @@ html[lang="bn"] .lede { line-height: 1.7; }
   font-variant-numeric: tabular-nums;
   font-size: 14px;
   padding: 12px 0;
-  border-top: 1px solid rgba(154, 166, 191, 0.18);
+  border-top: 1px solid var(--line);
 }
 .programme p {
   padding: 12px 0;
-  border-top: 1px solid rgba(154, 166, 191, 0.18);
+  border-top: 1px solid var(--line);
   font-size: 16px;
 }
 .programme time:first-of-type,
@@ -442,7 +451,7 @@ figcaption, .cap {
   gap: 28px;
   margin-top: 28px;
   padding: 20px 24px;
-  background: var(--paper);
+  background: var(--surface);
 }
 .marks img { height: 52px; width: auto; }
 .marks .krl { height: 64px; }
@@ -484,7 +493,7 @@ html[lang="bn"] .sub { letter-spacing: 0.04em; }
 }
 .dl:hover {
   background: var(--gold);
-  color: var(--ink);
+  color: var(--on-gold);
   border-color: var(--gold);
 }
 .film-meta .dl { margin-top: 16px; }
@@ -498,8 +507,8 @@ html[lang="bn"] .sub { letter-spacing: 0.04em; }
 }
 .coverage .clip img {
   width: 100%;
-  background: var(--paper);
-  outline: 1px solid rgba(239, 182, 60, 0.3);
+  background: var(--surface);
+  outline: 1px solid var(--line);
 }
 .card {
   display: flex;
@@ -508,7 +517,7 @@ html[lang="bn"] .sub { letter-spacing: 0.04em; }
   gap: 12px;
   padding: 26px 24px 28px;
   border: 1px solid var(--line);
-  background: rgba(239, 182, 60, 0.04);
+  background: rgba(168, 118, 29, 0.06);
 }
 .card .tag {
   font-size: 11px;
@@ -541,8 +550,8 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
 }
 .release img {
   width: 100%;
-  background: var(--paper);
-  outline: 1px solid rgba(239, 182, 60, 0.3);
+  background: var(--surface);
+  outline: 1px solid var(--line);
 }
 .release div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 
@@ -588,22 +597,64 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
    rather than an invented one. */
 .roster .role:empty { display: none; }
 
-.candid {
-  margin-top: 36px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+/* Guest carousel: one photograph at a time, swipeable, arrows and keyboard. */
+.carousel { position: relative; margin-top: 36px; }
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.candid figure { margin: 0; background: var(--ink-2); }
-.candid figure.wide { grid-column: span 2; }
-.candid img {
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.carousel-track > figure {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+  background: var(--ink-2);
+}
+.carousel-track > figure img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  aspect-ratio: 4 / 3;
+  display: block;
 }
-.candid figure.wide img { aspect-ratio: 16 / 7; }
-.candid figcaption { padding: 10px 12px 12px; margin-top: 0; }
+.carousel-track > figure figcaption {
+  padding: 12px 14px 14px;
+  margin-top: 0;
+  max-width: 78ch;
+}
+.carousel-btn {
+  position: absolute;
+  top: calc(50% - 40px);
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--on-gold);
+  background: rgba(251, 233, 229, 0.93);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+.carousel-btn:hover { background: var(--gold); }
+.carousel-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.carousel-btn[disabled] { opacity: 0.3; cursor: default; }
+.carousel-prev { left: 14px; }
+.carousel-next { right: 14px; }
+.carousel-count {
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  font-variant-numeric: tabular-nums;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
@@ -619,11 +670,13 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
   .nav-word { display: none; }
   .nav-links { gap: 12px; font-size: 12px; }
   .hero-copy, .wrap { padding-left: 16px; padding-right: 16px; }
-  .facts, .artefacts, .pair, .split, .portrait-row, .press-grid, .voices, .programme, .film, .hero-inner, .gallery, .coverage, .release, .roster, .candid {
+  .facts, .artefacts, .pair, .split, .portrait-row, .press-grid, .voices, .programme, .film, .hero-inner, .gallery, .coverage, .release, .roster {
     grid-template-columns: 1fr;
   }
-  .candid figure.wide { grid-column: auto; }
-  .candid figure.wide img { aspect-ratio: 4 / 3; }
+  .carousel-btn { width: 38px; height: 38px; font-size: 22px; }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+  .carousel-track > figure img { aspect-ratio: 4 / 3; }
   .release { gap: 22px; }
   .sub { margin-top: 44px; }
   .gallery figure.wide { grid-column: auto; }

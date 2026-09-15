@@ -96,6 +96,7 @@ const T = {
     gn5: "Shri Debashish Dhar",
     gr5: "MLA, Sonarpur Uttar",
     capArrival: "Arrival at Rabindra Okakura Bhawan. The conch and the bell before the hall opened.",
+    capTrioOutside: "Gunamata Reena J. Sarkar with guests outside Rabindra Okakura Bhawan.",
     capHallFront: "The front rows, listening. Press, farmers and the Samaj together.",
     galleryTitle: "From the hall",
     galleryLede: "Stills and clips from the Media Connect. The Krishi Ratna League intro played behind the welcome.",
@@ -235,6 +236,7 @@ const T = {
     gn5: "শ্রী দেবাশীষ ধর",
     gr5: "বিধায়ক, সোনারপুর উত্তর",
     capArrival: "রবীন্দ্র ওকাকুরা ভবনে আগমন. হল খোলার আগে শঙ্খ ও ঘণ্টা.",
+    capTrioOutside: "রবীন্দ্র ওকাকুরা ভবনের বাইরে গুণমাতা রীনা জে. সরকার অতিথিদের সঙ্গে.",
     capHallFront: "সামনের সারি, মন দিয়ে শুনছে. সংবাদমাধ্যম, কৃষক ও সমাজ একসঙ্গে.",
     galleryTitle: "হল থেকে",
     galleryLede: "মিডিয়া সংযোগের ছবি ও ক্লিপ. স্বাগত ব্যানারের পেছনে কৃষি রত্ন লীগের ইন্ট্রো চলে.",
@@ -306,3 +308,57 @@ if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) 
   heroVideo.pause();
   heroVideo.removeAttribute("autoplay");
 }
+
+// Guest carousel. Native scroll-snap does the moving; this only drives the
+// arrows, the counter and the arrow keys, so a swipe still works with JS off.
+document.querySelectorAll("[data-carousel]").forEach((root) => {
+  const track = root.querySelector("[data-carousel-track]");
+  const prev = root.querySelector("[data-carousel-prev]");
+  const next = root.querySelector("[data-carousel-next]");
+  const indexOut = root.querySelector("[data-carousel-index]");
+  const totalOut = root.querySelector("[data-carousel-total]");
+  if (!track) return;
+
+  const slides = Array.from(track.children);
+  if (!slides.length) return;
+  if (totalOut) totalOut.textContent = String(slides.length);
+
+  const current = () => {
+    const mid = track.scrollLeft + track.clientWidth / 2;
+    let best = 0;
+    let bestGap = Infinity;
+    slides.forEach((s, i) => {
+      const gap = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid);
+      if (gap < bestGap) { bestGap = gap; best = i; }
+    });
+    return best;
+  };
+
+  const go = (i) => {
+    const target = slides[Math.max(0, Math.min(slides.length - 1, i))];
+    if (target) track.scrollTo({ left: target.offsetLeft, behavior: "smooth" });
+  };
+
+  const sync = () => {
+    const i = current();
+    if (indexOut) indexOut.textContent = String(i + 1);
+    if (prev) prev.disabled = i === 0;
+    if (next) next.disabled = i === slides.length - 1;
+  };
+
+  if (prev) prev.addEventListener("click", () => go(current() - 1));
+  if (next) next.addEventListener("click", () => go(current() + 1));
+
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+  });
+
+  let raf = 0;
+  track.addEventListener("scroll", () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(sync);
+  }, { passive: true });
+  window.addEventListener("resize", sync);
+  sync();
+});
