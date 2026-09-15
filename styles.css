@@ -616,11 +616,14 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
   margin: 0;
   background: var(--ink-2);
 }
+/* Mixed orientations in one carousel — a panorama, two 4:3 and a portrait.
+   A fixed stage height with object-fit: contain shows each whole, uncropped. */
 .carousel-track > figure img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: min(68vh, 600px);
+  object-fit: contain;
   display: block;
+  background: var(--ink-3);
 }
 .carousel-track > figure figcaption {
   padding: 12px 14px 14px;
@@ -676,7 +679,7 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
   .carousel-btn { width: 38px; height: 38px; font-size: 22px; }
   .carousel-prev { left: 8px; }
   .carousel-next { right: 8px; }
-  .carousel-track > figure img { aspect-ratio: 4 / 3; }
+  .carousel-track > figure img { height: min(58vh, 420px); }
   .release { gap: 22px; }
   .sub { margin-top: 44px; }
   .gallery figure.wide { grid-column: auto; }
