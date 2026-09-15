@@ -118,14 +118,14 @@ const T = {
     gv7: "Clip from the hall.",
     mediaTitle: "In the media",
     mediaLede: "A running record of the coverage. Clippings, broadcast and video from the morning of 14 September 2026 are added here as they appear.",
-    mediaVidName: "Media Connect, on camera",
-    mediaVidRole: "YouTube · 14 September 2026",
-    mediaVidCap: "Footage from the Media Connect session at Rabindra Okakura Bhawan.",
-    mediaVidLink: "Watch on YouTube",
-    mediaVid2Name: "Media Connect — Interview with Shri Dudh Kumar Mondal",
-    mediaVid2Role: "YouTube · 14 September 2026",
-    mediaVid2Cap: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, on camera at Rabindra Okakura Bhawan.",
-    mediaVid2Link: "Watch on YouTube",
+    broadcastTitle: "Broadcast",
+    onlineTitle: "Online coverage",
+    socialTitle: "On social",
+    watchYt: "Watch on YouTube",
+    vid3Head: "Interview with Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal",
+    fbReel: "Reel from the morning",
+    fbPost: "Post from the Media Connect",
+    fbPhoto: "Photograph from the hall",
     clipTitle: "In print",
     clipOutlet: "Hello Evening Kolkata · Page 07 · 14 September 2026",
     clipHead: "Focus on better facilities for Farmers in WB",
@@ -137,7 +137,6 @@ const T = {
     releaseBody: "Issued for immediate release. Ref BKS-WB/PR/2026/09-14. Krishi Ratna League launched with AI-driven farmer outreach, Smt. Rinku Majumder Ghosh felicitated as State Adhyaksha, and the Durga Puja 2026 theme Protyabartan unveiled. English and Bangla, two pages.",
     releaseDl: "Download the press release (PDF)",
     footOrgs: "Bharatiya Krishak Samaj West Bengal, with KarmYog for the 21st Century.",
-    footPhotos: "Photographs: Bumba and Shubhashis.",
     footRsvp: "Smt. Reena J. Sarkar +91 98300 24611. Shri Ram Badrinathan +91 91677 19898.",
     footPlace: "State office: F-127, Downtown Mall, Uniworld City, New Town, Kolkata 700156.",
   },
@@ -260,14 +259,14 @@ const T = {
     gv7: "হলের ক্লিপ.",
     mediaTitle: "সংবাদমাধ্যমে",
     mediaLede: "সংবাদ-প্রচারের চলমান নথি. ১৪ই সেপ্টেম্বর ২০২৬ সকালের কাগজের কাটিং, সম্প্রচার ও ভিডিও যত প্রকাশিত হবে, এখানেই যুক্ত হবে.",
-    mediaVidName: "ক্যামেরায় মিডিয়া সংযোগ",
-    mediaVidRole: "ইউটিউব · ১৪ সেপ্টেম্বর ২০২৬",
-    mediaVidCap: "রবীন্দ্র ওকাকুরা ভবনে মিডিয়া সংযোগ অনুষ্ঠানের ফুটেজ.",
-    mediaVidLink: "ইউটিউবে দেখুন",
-    mediaVid2Name: "মিডিয়া সংযোগ — শ্রী দুধ কুমার মণ্ডলের সাক্ষাৎকার",
-    mediaVid2Role: "ইউটিউব · ১৪ সেপ্টেম্বর ২০২৬",
-    mediaVid2Cap: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ, রবীন্দ্র ওকাকুরা ভবনে ক্যামেরার সামনে.",
-    mediaVid2Link: "ইউটিউবে দেখুন",
+    broadcastTitle: "সম্প্রচার",
+    onlineTitle: "অনলাইন সংবাদ",
+    socialTitle: "সোশ্যাল মিডিয়ায়",
+    watchYt: "ইউটিউবে দেখুন",
+    vid3Head: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ — সাক্ষাৎকার",
+    fbReel: "সকালের রিল",
+    fbPost: "মিডিয়া সংযোগ থেকে পোস্ট",
+    fbPhoto: "হল থেকে ছবি",
     clipTitle: "ছাপার অক্ষরে",
     clipOutlet: "হ্যালো ইভনিং কলকাতা · পৃষ্ঠা ০৭ · ১৪ সেপ্টেম্বর ২০২৬",
     clipHead: "Focus on better facilities for Farmers in WB",
@@ -279,7 +278,6 @@ const T = {
     releaseBody: "অবিলম্বে প্রকাশের জন্য. স্মারক নং BKS-WB/PR/2026/09-14. এআই-ভিত্তিক কৃষক কল্যাণ উদ্যোগ সহ ‘কৃষি রত্ন লিগ’-এর সূচনা, রাজ্য অধ্যক্ষা হিসেবে শ্রীমতি রিঙ্কু মজুমদার ঘোষকে সংবর্ধনা, এবং দুর্গাপূজা ২০২৬-এর থিম ‘প্রত্যাবর্তন’ উন্মোচন. ইংরেজি ও বাংলা, দুই পৃষ্ঠা.",
     releaseDl: "প্রেস বিজ্ঞপ্তি ডাউনলোড করুন (পিডিএফ)",
     footOrgs: "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ, কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরির সঙ্গে.",
-    footPhotos: "ছবি: বুম্বা এবং শুভাশিস.",
     footRsvp: "শ্রীমতি রীনা জে. সরকার +৯১ ৯৮৩০০ ২৪৬১১. শ্রী রাম বদ্রীনাথন +৯১ ৯১৬৭৭ ১৯৮৯৮.",
     footPlace: "রাজ্য কার্যালয়: এফ-১২৭, ডাউনটাউন মল, ইউনিওয়ার্ল্ড সিটি, নিউ টাউন, কলকাতা ৭০০১৫৬.",
   },
@@ -365,4 +363,23 @@ document.querySelectorAll("[data-carousel]").forEach((root) => {
   }, { passive: true });
   window.addEventListener("resize", sync);
   sync();
+});
+
+// Broadcast facades. The thumbnail is a button; the YouTube player is only
+// built on click, so three videos cost three images on load rather than three
+// embedded players. With JS off, the "Watch on YouTube" link still works.
+document.querySelectorAll(".vid[data-yt]").forEach((card) => {
+  const btn = card.querySelector(".vid-play");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const frame = document.createElement("iframe");
+    frame.className = "vid-frame";
+    frame.src = "https://www.youtube-nocookie.com/embed/" + card.dataset.yt + "?autoplay=1&rel=0";
+    frame.title = btn.getAttribute("aria-label") || "Video";
+    frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    frame.referrerPolicy = "strict-origin-when-cross-origin";
+    frame.allowFullscreen = true;
+    btn.replaceWith(frame);
+    frame.focus();
+  });
 });

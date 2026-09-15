@@ -659,6 +659,118 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
   font-variant-numeric: tabular-nums;
 }
 
+/* ---- In the media ------------------------------------------------------ */
+/* Broadcast: thumbnail facades. The YouTube player only loads on click, so
+   three videos cost three images instead of three embedded players. */
+.vid-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.vid {
+  display: flex;
+  flex-direction: column;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+}
+.vid-play {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: var(--ink-3);
+  cursor: pointer;
+}
+.vid-play img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.vid-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(251, 233, 229, 0.92);
+  border: 1px solid var(--line);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.vid-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 17px;
+  border-color: transparent transparent transparent var(--on-gold);
+  transform: translateX(2px);
+}
+.vid-play:hover .vid-icon { background: var(--gold); transform: scale(1.06); }
+.vid-play:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.vid-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+.vid-meta {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.vid-meta h4 { font-size: 14.5px; font-weight: 500; line-height: 1.4; }
+
+/* Online coverage: one row per story, outlets on the right. */
+.coverage-list {
+  margin-top: 28px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.coverage-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cov-head { display: flex; align-items: baseline; gap: 14px; min-width: 0; }
+.cov-lang {
+  flex: 0 0 auto;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  min-width: 68px;
+}
+.cov-head h4 { font-size: 16px; font-weight: 500; line-height: 1.4; }
+.cov-links { flex: 0 0 auto; display: flex; gap: 10px; }
+.cov-links a,
+.social-list a {
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.cov-links a:hover,
+.social-list a:hover { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+
+.social-list {
+  margin-top: 28px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.social-list a { display: inline-flex; align-items: center; gap: 10px; }
+
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -680,6 +792,10 @@ html[lang="bn"] .card .tag { letter-spacing: 0.02em; }
   .carousel-prev { left: 8px; }
   .carousel-next { right: 8px; }
   .carousel-track > figure img { height: min(58vh, 420px); }
+  .vid-grid { grid-template-columns: 1fr; }
+  .coverage-list li { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .cov-head { flex-direction: column; gap: 6px; }
+  .cov-lang { min-width: 0; }
   .release { gap: 22px; }
   .sub { margin-top: 44px; }
   .gallery figure.wide { grid-column: auto; }
