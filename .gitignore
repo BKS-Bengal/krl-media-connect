@@ -1,6 +1,3 @@
 _drive_state.json
 .vercel
 _*.py
-.env
-.env.*
-node_modules/
