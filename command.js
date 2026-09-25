@@ -799,6 +799,18 @@
       <div class="table-wrap" style="margin-top:18px"><table class="data"><thead><tr><th>Team</th><th>Farmers</th><th>Farms</th><th>ACs</th><th>Progress</th><th>Attention</th></tr></thead><tbody>${teamRows}</tbody></table></div>`;
   }
 
+  function resolveAcId(id) {
+    if (D.byId(D.ACS, id)) return id;
+    const hits = D.ACS.filter((a) => a.id.endsWith("-" + id));
+    return hits.length === 1 ? hits[0].id : id;
+  }
+
+  function resolveFarmTab(tab) {
+    if (!tab || tab === "overview") return "overview";
+    if (tab === "support") return "people";
+    return tab;
+  }
+
   function render() {
     applyLang();
     const { parts, params } = parse();
@@ -807,7 +819,7 @@
     if (!root) html = viewCommand();
     else if (root === "geo") html = viewGeo(params);
     else if (root === "district" && parts[1]) html = viewDistrict(parts[1]);
-    else if (root === "ac" && parts[1]) html = viewAc(parts[1]);
+    else if (root === "ac" && parts[1]) html = viewAc(resolveAcId(parts[1]));
     else if (root === "teams") html = viewTeams();
     else if (root === "team" && parts[1]) html = viewTeam(parts[1]);
     else if (root === "agents") html = viewAgents(params);
@@ -815,7 +827,7 @@
     else if (root === "farmers") html = viewFarmers(params);
     else if (root === "farmer" && parts[1]) html = viewFarmer(parts[1]);
     else if (root === "farms") html = viewFarms(params);
-    else if (root === "farm" && parts[1]) html = viewFarm(parts[1], parts[2]);
+    else if (root === "farm" && parts[1]) html = viewFarm(parts[1], resolveFarmTab(parts[2]));
     else if (root === "activity") html = viewActivity(params);
     else if (root === "media") html = viewMedia();
     else if (root === "reports") html = viewReports();
